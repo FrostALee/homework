@@ -93,7 +93,7 @@ const Homework = (props) => {
                 marginLeft: "15px"
               }}
               onClick={() => {
-                history.push("/detail");
+                history.push(`/detail/${sc.today}`);
               }}
               >
               </div>

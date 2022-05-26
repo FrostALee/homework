@@ -1,13 +1,11 @@
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
-import Homework from './Homework'
-import {Route} from 'react-router-dom';
 
 
 const Detail = (props) => {
     const history = useHistory();
-    const dayName = useParams();
     const [rate, setRate] = React.useState(0);
+    const paramitor = useParams();
     
     return(
         <div>
@@ -25,6 +23,7 @@ const Detail = (props) => {
                     textAlign: "center", color: "#dd0b64",
                     fontSize: "30px", fontWeight: "bold"
                 }}>
+                    {paramitor.day_Name}요일
                     평점 남기기
                 </p>
 
@@ -54,7 +53,7 @@ const Detail = (props) => {
                         border: "0px", outline: "none",
                         borderRadius: "15px", padding: "1rem",
                         color: "#fff", fontSize: "20px",
-                        fontWeight: "bold"
+                        fontWeight: "bold", marginBottom: "45px"
                     }}
                     onClick={() => {
                         history.goBack();
